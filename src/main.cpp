@@ -58,6 +58,8 @@ int main(int argc, char **argv)
         for (size_t j=0; j<charCount; ++j)
         {
             path[i][j] = fgetc(pFile);
+            if (path[i][j] == '\r')
+                path[i][j] = '\0';
         }
         path[i][charCount-1] = '\0';
 
